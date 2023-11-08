@@ -20,6 +20,12 @@ body{
     margin: auto;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
 .bold{
     font-weight: 700;
 }
@@ -129,6 +135,11 @@ body{
 }
 .filterBar button:hover{
     background-color: var(--filter-bg-color);
+}
+
+.filterBar button i{
+    color: var(--main-color);
+    padding-right: 1rem;
 }
 
 .infoBar{
@@ -258,9 +269,38 @@ body{
     padding: 1.5rem;
 }
 
+.activity-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3rem;
+    padding: 3rem;
+}
+.activity-section h2{
+    width: 100%;
+}
+
+.activity-section a{
+    width: 23%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.activity-section .card{
+    border-radius: 2rem;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10); 
+}
+
+.activity-section .card img{
+    width: 100%;
+    border-radius: 2rem 2rem 0 0;
+    height: 38rem;
+}
 
 
-
+.activity-section h3{
+    padding: 2rem 1.9rem;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
