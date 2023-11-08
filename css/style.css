@@ -228,7 +228,7 @@ main{
     padding: 0 1.5rem;
 }
 
-.lodging .card div i:not(.neutral-star){
+.card div i:not(.neutral-star){
     color: var(--main-color);
 }
 
@@ -393,7 +393,144 @@ main{
     }
 }
 
-/* Small devices (phones, less than 768px) */
+
 @media (max-width: 767.98px) {
-    /* ... */
+    
+    body{
+        padding: 0;
+    }
+    .top-header{
+        flex-direction: column;
+        align-items: center;
+        height: revert;
+    }
+    .logo{
+        transform: scale(0.33);
+    }
+
+    .info{
+        padding: 2rem;
+    }
+    .navBar{
+        width: 100%;
+        gap: 0;
+        justify-content: space-around;
+    }
+    .navBar .navLink{
+        padding-top: 0;
+        border-bottom: 2px solid var(--main-bg-color);
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 1.5rem;
+    }
+    .navBar .navLink:hover{
+        border-top: none;
+        border-bottom: 2px solid var(--main-color);
+    }
+
+    .headline h1{
+        margin-bottom: 0.8rem;
+    }
+
+    .searchBar{
+        width: 100%;
+    }
+
+    .searchBar input[type="text"]{
+        padding: 0;
+    }
+
+    .searchBar .desktop-icon{
+        display: none;
+    }
+
+    .searchBar .mobile-icon{
+        display: block;
+    }
+
+    .searchBar button[type="submit"]{
+        height: 49px; 
+        border-radius: 1.5rem;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .filterBar{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .filterBar p{
+        width: 100%;
+    }
+    .filterBar button{
+        width: 47%;
+        font-size: 14px;
+    }
+
+    .lodging{
+        order: 2;
+    }
+    .top-rate{
+        order: 1;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 3rem 2rem;
+        border-radius: 0;
+    }
+
+    .top-rate h2{
+        margin-bottom: 0;
+    }
+
+    .top-rate a{
+        width: 100%;
+    }
+
+    .grey-bcg{
+        background-color: inherit;
+    }
+
+    .lodging .card-container{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .lodging .card-container a{
+        width: 100%;
+    }
+
+    .lodging .card{
+        box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+    }
+
+    .lodging .more{
+        width: 100%;
+    }
+
+    .activity-section{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .activity-section a{
+        width: 100%;
+    }
+
+    .activity-section a .card img{
+        height: 14.1rem;
+    }
+
+    .activity-section .correct-position{
+        position: revert;
+    }
+
+    .bottom-footer{
+        padding: 3rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 5rem;
+    }
+
+    .bottom-footer ul{
+        gap: 1.5rem;
+    }
+
 }
