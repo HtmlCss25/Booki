@@ -46,6 +46,10 @@ main{
     font-size:1.6rem;
 }
 
+.small-para{
+    font-size: 1.4rem;
+}
+
 .top-header{
     display: flex;
     justify-content: space-between;
@@ -171,6 +175,7 @@ main{
 .lodging,
 .top-rate{
     padding: 3rem;
+    border-radius: 2rem;
 }
 
 .grey-bcg{
@@ -243,6 +248,15 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+}
+
+.fa-chart-line{
+    color: var(--main-color);
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    font-size: 1.8rem;
 }
 
 .top-rate a{
@@ -281,7 +295,7 @@ main{
 }
 
 .activity-section a{
-    width: 23%;
+    width: 22%;
     text-decoration: none;
     color: inherit;
 }
@@ -307,6 +321,7 @@ main{
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 3.5rem;
 }
 
 .bottom-footer ul{
@@ -322,47 +337,59 @@ main{
     color: inherit;
 }
 
-.bottom-border{
-    padding-bottom: 5.8rem;
-    width: 100vw;
-    background-color: var(--main-bg-color);
-    position: relative;
-    left: -5rem;
-}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-    .hebergements-and-populaires {
+    
+    .lodging-section{
         flex-direction: column;
     }
 
-    .hebergements {
+    .lodging,
+    .top-rate{
         width: 100%;
     }
 
-    .populaires {
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    .populaires-cards {
-        display: flex;
+    .top-rate{
         flex-direction: row;
-        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
-    .populaires-cards a {
-        width: 30%;
+    .top-rate a .card img{
+        width: 40%;
+        object-fit: cover;
     }
 
-    .populaires-cards .card-title {
-        font-size: 14px;
+    .top-rate .card-content{
+        width: 60%;
+        padding-bottom: 0;
+    }
+    .top-rate h2{
+        width: 100%;
+        margin-bottom: 2rem;
     }
 
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
+    .top-rate a{
+        width: 32%;
+    }
+
+    .activity-section a{
+        width: 21%;
+    }
+    .activity-section a .card{
+        height: 100%;
+    }
+    .activity-section a .card img{
+        height: 20rem;
+    }
+    .activity-section a .card h3{
+        padding: 2rem 1.9rem;
+    }
+    .activity-section .correct-position{
+        position: relative;
+        top: 0.7rem;
     }
 }
 
