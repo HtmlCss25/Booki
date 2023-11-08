@@ -301,6 +301,34 @@ main{
 .activity-section h3{
     padding: 2rem 1.9rem;
 }
+
+.bottom-footer{
+    background-color: var(--main-bg-color);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bottom-footer ul{
+    list-style: none;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bottom-footer a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.bottom-border{
+    padding-bottom: 5.8rem;
+    width: 100vw;
+    background-color: var(--main-bg-color);
+    position: relative;
+    left: -5rem;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
