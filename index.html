@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style-opti.css">
 
     <script src="https://kit.fontawesome.com/05e0199f4e.js" crossorigin="anonymous"></script>
 </head>
@@ -22,7 +22,7 @@
         <img src="./images/logo/Booki.png" alt="logo du site Booki" class="logo">
         <nav class="navBar">
             <a href="#info" class="navLink">Hébergements</a>
-            <a href="#activites" class="navLink">Activités</a>
+            <a href="#activity-section" class="navLink">Activités</a>
         </nav>
     </header>
 
@@ -34,10 +34,10 @@
             </div>
             <form class="searchBar" method="get">
                 <i class="fa-solid fa-location-dot"></i><!--
-                --><input type="text" placeholder="Choisissez une ville" class="bold title"><!--
+                --><input type="text" placeholder="Choisissez une ville" class="bold title" value="Marseille, France"><!--
                 --><button type="submit" class="title bold">
                     <span class="desktop-icon">Rechercher</span>
-                        <i class="fa-solid fa-magnifying-glass mobile-icon"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 
             </form>
@@ -228,7 +228,7 @@
 
             </div>
         </section>
-        <section class="activity-section">
+        <section class="activity-section" id="activity-section">
 
             <h2 class="big-title bold">Activités a Marseille</h2>
             <a href="#">

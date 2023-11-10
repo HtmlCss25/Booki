@@ -1,0 +1,448 @@
+/****** General ***********/
+
+/* used dirtymarkup formatter */
+
+* {
+	font-family: 'Raleway', sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+:root {
+	--main-color: #0065FC;
+	--main-bg-color: #F2F2F2;
+	--filter-bg-color: #DEEBFF;
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.6rem;
+	padding: 0 5rem;
+	max-width: 144rem;
+	margin: auto;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 3.5rem;
+}
+.bold {
+	font-weight: 700;
+}
+.reset-weight {
+	font-weight: 400;
+}
+.big-title {
+	font-size: 2.2rem;
+}
+.title {
+	font-size: 1.8rem;
+}
+.para {
+	font-size: 1.6rem;
+}
+.small-para {
+	font-size: 1.4rem;
+}
+.top-header {
+	display: flex;
+	justify-content: space-between;
+	height: 7.9rem;
+	margin-bottom: 3rem;
+}
+.logo {
+	padding: 3rem 0;
+}
+.navBar {
+	display: flex;
+	gap: 6.8rem;
+}
+.navLink {
+	display: inline-block;
+	padding-top: 1.6rem;
+	text-decoration: none;
+	color: black;
+}
+.navLink:hover {
+	color: var(--main-color);
+	border-top: 2px solid var(--main-color);
+	padding-top: 1.4rem;
+}
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 3.5rem;
+}
+.searchBar {
+	display: flex;
+	width: fit-content;
+	border-radius: 1.5rem;
+}
+.searchBar .fa-location-dot {
+	background-color: var(--main-bg-color);
+	width: 5rem;
+	line-height: 5rem;
+	text-align: center;
+	border-radius: 1.5rem 0 0 1.5rem;
+}
+.searchBar input[type=text] {
+	border: none;
+	text-align: center;
+	padding: 0 2.4rem;
+	border-top: 1px solid var(--main-bg-color);
+	border-bottom: 1px solid var(--main-bg-color);
+}
+.searchBar input[type=text]:focus {
+	outline: none;
+}
+.searchBar button[type=submit] {
+	padding: 1.5rem;
+	background-color: var(--main-color);
+	color: var(--main-bg-color);
+	border: none;
+	border-radius: 0 1.5rem 1.5rem 0;
+}
+.searchBar .fa-magnifying-glass {
+	display: none;
+}
+.filterBar {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+.filterBar button {
+	display: flex;
+	align-items: center;
+	padding: 1.5rem;
+	border-radius: 2.5rem;
+	background-color: white;
+	border: 2px solid var(--main-bg-color);
+}
+.filterBar button:hover {
+	background-color: var(--filter-bg-color);
+}
+.filterBar button i {
+	color: var(--main-color);
+	padding-right: 1rem;
+}
+.infoBar {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.infoBar i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid var(--main-bg-color);
+	border-radius: 50%;
+	width: 2rem;
+	height: 2rem;
+	text-align: center;
+	color: var(--main-color);
+	font-size: 1rem;
+}
+.lodging-section {
+	display: flex;
+	justify-content: space-between;
+	gap: 4rem;
+}
+.lodging, .top-rate {
+	padding: 3rem;
+	border-radius: 2rem;
+}
+.grey-bcg {
+	background-color: var(--main-bg-color);
+}
+/*a retirer*/
+
+.lodging-section h2 {
+	width: 100%;
+}
+.lodging {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	width: 64%;
+}
+.lodging a {
+	width: 30%;
+	text-decoration: none;
+	color: inherit;
+}
+.card {
+	border-radius: 2rem 2rem 2rem 2rem;
+}
+.lodging .card {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	background-color: white;
+	padding: 0.5rem;
+	padding-bottom: 1.5rem;
+}
+.lodging .card-container {
+	display: flex;
+	justify-content: space-between;
+}
+.lodging .card h3, .lodging .card p, .lodging .card div {
+	padding: 0 1.5rem;
+}
+.card div i:not(.neutral-star) {
+	color: var(--main-color);
+}
+.neutral-star {
+	color: var(--main-bg-color);
+}
+.lodging .card img {
+	width: 100%;
+	height: 12.4rem;
+	border-radius: 2rem 2rem 0 0;
+}
+.top-rate {
+	width: 32%;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+}
+.fa-chart-line {
+	color: var(--main-color);
+	position: absolute;
+	top: 3rem;
+	right: 3rem;
+	font-size: 1.8rem;
+}
+.top-rate a {
+	text-decoration: none;
+	color: inherit;
+}
+.top-rate .card {
+	background-color: white;
+	padding: 0.5rem;
+	display: flex;
+}
+.top-rate .card img {
+	width: 12.3rem;
+	height: 14.6rem;
+	border-radius: 2rem 0 0 2rem;
+}
+.card-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1.5rem;
+}
+.activity-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 3rem;
+	padding: 3rem;
+}
+.activity-section h2 {
+	width: 100%;
+}
+.activity-section a {
+	width: 22%;
+	text-decoration: none;
+	color: inherit;
+}
+.activity-section .card {
+	border-radius: 2rem;
+	box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+}
+.activity-section .card img {
+	width: 100%;
+	border-radius: 2rem 2rem 0 0;
+	height: 38rem;
+}
+.activity-section h3 {
+	padding: 2rem 1.9rem;
+}
+.bottom-footer {
+	background-color: var(--main-bg-color);
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-top: 3.5rem;
+}
+.bottom-footer ul {
+	list-style: none;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+.bottom-footer a {
+	text-decoration: none;
+	color: inherit;
+}
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+
+/* Medium devices (tablets, less/equal than 1024px) */
+
+@media (max-width: 1024px) {
+	.lodging-section {
+		flex-direction: column;
+	}
+	.lodging, .top-rate {
+		width: 100%;
+	}
+	.top-rate {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.top-rate a .card img {
+		width: 40%;
+		object-fit: cover;
+	}
+	.top-rate .card-content {
+		width: 60%;
+		padding-bottom: 0;
+	}
+	.top-rate h2 {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+	.top-rate a {
+		width: 32%;
+	}
+	.activity-section a {
+		width: 21%;
+	}
+	.activity-section a .card {
+		height: 100%;
+	}
+	.activity-section a .card img {
+		height: 20rem;
+	}
+	.activity-section a .card h3 {
+		padding: 2rem 1.9rem;
+	}
+	.activity-section .correct-position {
+		position: relative;
+		top: 0.7rem;
+	}
+}
+@media (max-width: 767.98px) {
+	body {
+		padding: 0;
+	}
+	.top-header {
+		flex-direction: column;
+		align-items: center;
+		height: revert;
+	}
+	.logo {
+		transform: scale(0.33);
+	}
+	.info {
+		padding: 2rem;
+	}
+	.navBar {
+		width: 100%;
+		gap: 0;
+		justify-content: space-around;
+	}
+	.navBar .navLink {
+		padding-top: 0;
+		border-bottom: 2px solid var(--main-bg-color);
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		padding-bottom: 1.5rem;
+	}
+	.navBar .navLink:hover {
+		border-top: none;
+		border-bottom: 2px solid var(--main-color);
+	}
+	.headline h1 {
+		margin-bottom: 0.8rem;
+	}
+	.searchBar {
+		width: 100%;
+	}
+	.searchBar input[type="text"] {
+		padding: 0;
+	}
+	.searchBar .desktop-icon {
+		display: none;
+	}
+	.searchBar .fa-magnifying-glass {
+		display: block;
+	}
+	.searchBar button[type="submit"] {
+		height: 49px;
+		border-radius: 1.5rem;
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	}
+	.filterBar {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.filterBar p {
+		width: 100%;
+	}
+	.filterBar button {
+		width: 47%;
+		font-size: 14px;
+	}
+	.lodging {
+		order: 2;
+	}
+	.top-rate {
+		order: 1;
+		flex-direction: column;
+		gap: 1.5rem;
+		padding: 3rem 2rem;
+		border-radius: 0;
+	}
+	.top-rate h2 {
+		margin-bottom: 0;
+	}
+	.top-rate a {
+		width: 100%;
+	}
+	.grey-bcg {
+		background-color: inherit;
+	}
+	.lodging .card-container {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+	.lodging .card-container a {
+		width: 100%;
+	}
+	.lodging .card {
+		box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+	}
+	.lodging .more {
+		width: 100%;
+	}
+	.activity-section {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+	.activity-section a {
+		width: 100%;
+	}
+	.activity-section a .card img {
+		height: 14.1rem;
+	}
+	.activity-section .correct-position {
+		position: revert;
+	}
+	.bottom-footer {
+		padding: 3rem;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		gap: 5rem;
+	}
+	.bottom-footer ul {
+		gap: 1.5rem;
+	}
+}
